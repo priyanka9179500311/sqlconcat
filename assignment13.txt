@@ -1,0 +1,61 @@
+# sqlconcat
+this sqlqueries are concatenation
+welcome
+
+MariaDB [hello]> create table person(
+    -> id int unsigned primary key auto_increment,
+    -> name varchar(255),
+    -> surname varchar(255)
+    -> );
+	
+	insert into person (name,surname) values ('priyanka','yadav');
+	 
+	insert into person (name,surname) values ('mahima','aray');
+	 
+	insert into person (name,surname) values ('jayshree','khuar');
+	 
+	insert into person (name,surname) values ('harsh','amb');
+	  
+	insert into person (name,surname) values ('mohit','shiv');
+	  
+	insert into person (name,surname) values ('anushka','rishiwal');
+	
+	insert into person (name,surname) values ('aradhaya','rishiwal');
+	
+	insert into person (name,surname) values ('divya','amb');
+	
+	insert into person (name,surname) values ('vanshika','shiv');
+	 
+	insert into person (name,surname) values ('vedika','amb');
+	 
+	select * from person;
+	+----+----------+----------+
+	| id | name     | surname  |
+	+----+----------+----------+
+	|  1 | priyanka | yadav    |
+	|  2 | mahima   | aray     |
+	|  3 | jayshree | khuar    |
+	|  4 | harsh    | amb      |
+	|  5 | mohit    | shiv     |
+	|  6 | anushka  | rishiwal |
+	|  7 | aradhaya | rishiwal |
+	|  8 | divya    | amb      |
+	|  9 | vanshika | shiv     |
+	| 10 | vedika   | amb      |
+	+----+----------+----------+
+	
+	select person.id, concat(name, ' ',surname) as 'full name' from person;
+	+----+-------------------+
+	| id | full name         |
+	+----+-------------------+
+	|  1 | priyanka yadav    |
+	|  2 | mahima aray       |
+	|  3 | jayshree khuar    |
+	|  4 | harsh amb         |
+	|  5 | mohit shiv        |
+	|  6 | anushka rishiwal  |
+	|  7 | aradhaya rishiwal |
+	|  8 | divya amb         |
+	|  9 | vanshika shiv     |
+	| 10 | vedika amb        |
+	+----+-------------------+
